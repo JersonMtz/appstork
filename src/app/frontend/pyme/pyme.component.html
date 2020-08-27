@@ -1,5 +1,5 @@
 <app-index>
-    <div class="container mt-3">
+    <div class="container mt-3 animate__animated animate__fadeInUp">
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -127,18 +127,38 @@
             </a>
         </div>
 
-        <div class="header-body bg-light d-none d-md-block"></div>
-        <div class="d-md-none d-block">
-
-        </div>
-        <hr>
-        <div class="w-75 mx-auto">
-            <div class="row">
-                <div class="col-md-3 my-1">
-                    <h4><b>Buen servicio</b></h4>
+        <!-- CABECERA MOBILE-->
+        <div class="d-md-none d-sm-block animate__animated animate__fadeInUp">
+            <div class="row justify-content-md-center">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img src="../../../assets/img/pyme-logo.jpg" class="img-fluid rounded-circle" width="50%"
+                            alt="MIPYME">
+                    </div>
                 </div>
-                <div class="col-md-9 my-1">
-                    <div class="progress">
+            </div>
+
+            <div class="text-center mt-n3">
+                <button mat-icon-button matTooltip="Mostrar imagen de fondo" class="btn btn-outline-light mx-1">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button mat-icon-button matTooltip="Calificar negocio" class="btn btn-outline-light mx-1">
+                    <i class="fas fa-star"></i>
+                </button>
+                <button mat-icon-button matTooltip="Compartir" class="btn btn-outline-light mx-1">
+                    <i class="fas fa-share"></i>
+                </button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="w-75 mx-auto animate__animated animate__fadeInUp">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 class="my-auto"><b>Buen servicio</b></h4>
+                </div>
+                <div class="col-md-9 mb-3">
+                    <div class="progress mt-1">
                         <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -146,11 +166,11 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3 my-1">
-                    <h4><b>Atención al cliente</b></h4>
+                <div class="col-md-3">
+                    <h4 class="my-auto"><b>Atención al cliente</b></h4>
                 </div>
-                <div class="col-md-9 my-1">
-                    <div class="progress">
+                <div class="col-md-9 mb-3">
+                    <div class="progress mt-1">
                         <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
                             aria-valuemin="0" aria-valuemax="75"></div>
                     </div>
@@ -158,11 +178,11 @@
             </div>
 
             <div class="row">
-                <div class="col-md-3 my-1">
-                    <h4><b>Responsabilidad</b></h4>
+                <div class="col-md-3">
+                    <h4 class="my-auto"><b>Responsabilidad</b></h4>
                 </div>
-                <div class="col-md-9 my-1">
-                    <div class="progress">
+                <div class="col-md-9 mb-3">
+                    <div class="progress mt-1">
                         <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
                             aria-valuemin="0" aria-valuemax="80"></div>
                     </div>
@@ -170,50 +190,55 @@
             </div>
 
         </div>
+
         <hr>
-        <h2>
-            Java Caffee
-            <button mat-icon-button matTooltip="Agregar a favoritos"
-                class="btn d-sm-block d-md-none btn-outline-light mx-1 float-right">
-                <i class="fas fa-star"></i>
-            </button>
-        </h2>
+        <h2> Java Caffee </h2>
 
         <div class="row mt-3 mb-5">
-            <div class="col-md-8 order-md-12">
-                <b>Detalles</b> <br />
-                <p>
+            <div class="col-md-7 order-md-12">
+                <h4><b>Detalles</b></h4>
+                <p class="text-justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minima hic placeat vel, similique
                     accusamus numquam quos nesciunt quidem, sed nam eveniet magnam, tenetur quisquam ratione vero
                     voluptatum deleniti in?
                 </p>
-                <p>
+                <p class="text-justify">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minima hic placeat vel, similique
                     accusamus numquam quos nesciunt quidem, sed nam eveniet magnam, tenetur quisquam ratione vero
-                    voluptatum deleniti in?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minima hic placeat vel, similique
+                    voluptatum deleniti in? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minima
+                    hic placeat vel, similique
                     accusamus numquam quos nesciunt quidem, sed nam eveniet magnam, tenetur quisquam ratione vero
                     voluptatum deleniti in?
                 </p>
                 <br>
-                <b>Contacto</b><br>
-                <ul>
-                    <li style="cursor: pointer;"><i class="fas fa-phone-alt"></i> Teléfono</li>
-                    <li style="cursor: pointer;"><i class="fas fa-at"></i> Email</li>
-                    <li style="cursor: pointer;"><i class="fab fa-whatsapp"></i> Whatsapp</li>
-                    <li style="cursor: pointer;"><i class="fab fa-facebook-square"></i> Facebook</li>
-                </ul>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h4><b>Contacto</b></h4>
+                        <br>
+                        <ul>
+                            <li style="cursor: pointer;"><i class="fas fa-phone-alt"></i> Teléfono</li>
+                            <li style="cursor: pointer;"><i class="fas fa-at"></i> Email</li>
+                            <li style="cursor: pointer;"><i class="fab fa-whatsapp"></i> Whatsapp</li>
+                            <li style="cursor: pointer;"><i class="fab fa-facebook-square"></i> Facebook</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8">
+                        <h4><b>Ubicación</b></h4>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7859.9601832729695!2d-84.11740383945472!3d9.9356142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e39eaea499fd%3A0x678886b7a708336a!2sE-xpress!5e0!3m2!1ses-419!2scr!4v1598556960269!5m2!1ses-419!2scr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 order-md-1 mt-3 mb-5">
-                <b>Comentarios</b>
+            <div class="col-md-5 order-md-1 mt-3 mb-5">
                 <br>
                 <br>
-                <small class="text-muted">*** En mantenienido ***</small>
+                <div class="container">
+                    <div class="fb-comments" data-mobile data-order-by="reverze-time"
+                        data-href="https://storkservices.herokuapp.com/catalogo/restaurantes/java-coffee"
+                        data-numposts="15" data-width="100%"></div>
+                </div>
             </div>
         </div>
-
-
     </div>
+    <br>
+    <br>
 </app-index>
