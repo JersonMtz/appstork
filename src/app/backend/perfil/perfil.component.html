@@ -1,0 +1,127 @@
+<app-dashboard>
+    <h1 class="display-1 text-center"><b>Auth PYME</b></h1>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="text-center">
+                <img src="../../../assets/img/profile.png" class="img-fluid img-thumbnail rounded-circle p-2 hvr-grow"
+                    width="50%" alt="profile">
+                <hr class="mt-3 shadow">
+                
+                <button mat-icon-button matTooltip="Editar información" class="btn btn-light mx-1" data-toggle="modal"
+                    data-target="#editarInfo" (click)="change()">
+                    <i class="fas fa-user-edit"></i>
+                </button>
+                <button mat-icon-button matTooltip="Cambiar foto de perfil" class="btn btn-light mx-1" data-toggle="modal"
+                data-target="#subirFoto">
+                    <i class="fas fa-image"></i>
+                </button>
+                <button mat-icon-button matTooltip="Eliminar foto de perfil" class="btn btn-light mx-1" data-toggle="modal"
+                data-target="#borrarFoto">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <h1 class="mt-3">{{ firstName1 }}</h1>
+                <h4 class="mt-n3 text-muted">{{ email1 }}</h4>
+            </div>
+        </div>
+        <div class="col-md-8 p-3">
+            <div class="container mb-5">
+                <p class="text-justify">
+                    {{ description1 }}
+                </p>
+                <p class="text-justify">
+                    {{ description1 }}
+                </p>
+            </div>
+        </div>
+    </div>
+</app-dashboard>
+
+<!-- EDITAR INFO -->
+<div class="modal fade" id="editarInfo" data-backdrop="static" tabindex="-1" aria-labelledby="editarInfoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title text-info" id="editarInfoLabel">Información</h1>
+                <button class="close btn btn-light" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="mat-form">
+                    <small class="text-danger" *ngIf="!Nombre.valid">Campo requerido</small>
+                    <mat-form-field class="mat-form-group" appearance="outline">
+                        <mat-label>Nombre completo</mat-label>
+                        <input required type="text" [(ngModel)]="firstName2" name="nombre" #Nombre="ngModel" matInput placeholder="Juanito Pérez Arias">
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-form-group" appearance="outline">
+                        <mat-label>Correo</mat-label>
+                        <input type="email" [(ngModel)]="email2" name="correo" matInput placeholder="micorreo@mail.com">
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-form-group" appearance="outline">
+                        <mat-label>Descripción</mat-label>
+                        <textarea required matInput rows="10" [(ngModel)]="description2" #Descripcion name="descripcion"></textarea>
+                    </mat-form-field>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button mat-raised-button class="btn bg-secondary mx-1 text-white"
+                    data-dismiss="modal">Cancelar</button>
+                <button mat-raised-button class="btn mx-1 text-white" color="primary" (click)="save()" data-dismiss="modal">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL SUBIR FOTO-->
+<div class="modal fade" id="subirFoto" data-backdrop="static" tabindex="-1" aria-labelledby="subirFotoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title text-info" id="subirFotoLabel">Cambio de imagen</h1>
+                <button class="close btn btn-light" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img [src]="urlImg" class="img-fluid img-thumbnail rounded-circle p-2"
+                    width="30%" alt="profile">
+                <p class="text-center mt-4">
+                    Escoja una imagen para cargarla a su perfil.
+                </p>
+                <hr class="mt-1">
+                <input type="file" class="d-none" #upload (change)="show($event)">
+                <button *ngIf="!guardar" mat-raised-button class="btn mx-1" (click)="upload.click()" color="primary">&nbsp; Subir &nbsp;</button>
+                <button *ngIf="guardar" mat-raised-button class="btn mx-1" color="primary">Guardar</button>
+                <button mat-raised-button class="btn bg-secondary mx-1 text-white" data-dismiss="modal" (click)="reset()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL BORRAR FOTO-->
+<div class="modal fade" id="borrarFoto" data-backdrop="static" tabindex="-1" aria-labelledby="borrarFotoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title text-info" id="borarFotoLabel">¿Desea borrar la foto de perfil?</h1>
+                <button class="close btn btn-light" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-muted mb-5">
+                    Al aceptar se eliminara la imagen de perfil permanentemente. 
+                    Le sugerimos usar una imagen que lo represente dentro de la plataforma.
+                </p>
+                <button mat-raised-button class="btn mx-1" color="primary">Aceptar</button>
+                <button mat-raised-button class="btn bg-secondary mx-1 text-white"
+                    data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

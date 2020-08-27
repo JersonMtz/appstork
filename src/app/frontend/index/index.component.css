@@ -1,0 +1,29 @@
+mat-sidenav-container {
+    height: 100%;
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+mat-toolbar.navbar.navbar-expand-lg.navbar-dark.shadow {
+    background: #0774A6;
+}
+
+div.toolbar {
+    height: 20px;
+    background:#0890CC;
+}
+
+span.text-white.navbar-toggler {
+    border: none;
+}
+
+a.text-white.mx-0.hvr-overline-from-center.active, a.text-white.mx-0.hvr-overline-from-center:hover {
+    background: #076F9F;
+    text-decoration: none;
+}
+
+footer {
+    background: #222222;
+}

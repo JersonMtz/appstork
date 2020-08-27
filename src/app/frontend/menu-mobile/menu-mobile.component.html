@@ -1,0 +1,28 @@
+<mat-selection-list [multiple]="false">
+
+    <mat-list-option>
+        <a routerLink="/" class="nav-link text-dark" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <i class="fas fa-home"></i> Inicio</a>
+    </mat-list-option>
+
+    <mat-list-option>
+        <a routerLink="/header" class="nav-link text-dark"><i class="fas fa-heart"></i> Contribuye</a>
+    </mat-list-option>
+
+    <mat-list-option>
+        <a routerLink="/catalogo" class="nav-link text-dark"><i class="fas fa-book"></i> Catálogo</a>
+    </mat-list-option>
+
+    <mat-list-option>
+        <a routerLink="/acerca" routerLinkActive="active" class="nav-link text-dark"><i class="fas fa-comment-alt"></i> Acerca de</a>
+    </mat-list-option>
+
+</mat-selection-list>
+<div class="footer">
+    <button mat-icon-button routerLink="/dashboard" class="btn btn-light mx-1"><i class="fas fa-user"></i></button>
+    |
+    <button mat-icon-button class="btn btn-light mx-1"><i class="far fa-edit"></i></button>
+    <hr/>
+    <small class="text-muted">Devps. Solution</small>
+</div>

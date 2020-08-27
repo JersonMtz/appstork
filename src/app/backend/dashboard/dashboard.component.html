@@ -1,0 +1,65 @@
+<div class="fixed-top animate__animated  animate__fadeInDown">
+    <mat-toolbar class="navbar navbar-expand-lg bg-dark shadow">
+        <div class="container">
+            <button mat-icon-button class="navbar-toggler ml-auto btn bg-dark mb-3 mr-n3" data-toggle="collapse"
+                data-target="#navbarCollapse">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse bg-dark" id="navbarCollapse">    
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item mx-1">
+                        <a  class="text-white mx-0" mat-button>
+                            <i class="fas fa-home"></i> Principal
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a routerLink="/dashboard/mipyme" routerLinkActive="active" class="text-white mx-0" mat-button>
+                            <i class="fas fa-award"></i> MI PYME
+                        </a>
+                    </li>
+                    <li class="nav-item mx-1">
+                        <a class="text-white mx-0" mat-button>
+                            <i class="far fa-heart"></i> Favoritos
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown mx-1 mb-2">
+                        <a class="text-white mx-0 dropdown-toggle" data-toggle="dropdown" mat-button>
+                            <i class="fas fa-user"></i> Pablo
+                        </a>
+                        <div class="dropdown-menu animate__animated animate__fadeIn">
+                            <a routerLink="/dashboard" class="dropdown-item">
+                                Perfil
+                            </a>
+                            <a class="dropdown-item">
+                                Configuración
+                            </a>
+                            <a class="dropdown-item">
+                                Salir
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </mat-toolbar>
+    <div class="bg-info text-white text-center">
+        <a routerLink="/dashboard/principal" class="text-white">
+            <h1 class="d-md-none d-sm-block py-2"><i class="fas fa-tachometer-alt"></i> Dashboard</h1> 
+        </a> 
+    </div>
+</div>
+
+<section class="container animate__animated animate__fadeInUp">
+    <ng-content></ng-content>
+</section>
+
+<footer class="bg-dark text-white mt-5 fixed-bottom">
+    <div class="text-center">
+        <small class="text-muted">
+            Copyright &copy; 2020
+        </small>
+    </div>
+</footer>

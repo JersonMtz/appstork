@@ -1,0 +1,50 @@
+.parallax{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:25rem;
+	max-width: 100%;
+    position: relative;
+    background-image: url('../../../assets/img/img1.png');
+}
+
+.parallax::before {
+    content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.parallax-text {
+	color:#fff;
+	font-size: 2rem;
+	font-weight: bold;
+	left: 10%;
+	position: absolute;
+	text-align: center;
+	top:30%;
+	width: 80%;
+}
+
+.example-card {
+	max-width: 400px;
+}
+
+.example-header-image {
+	background-image: url('../../../assets/img/restaurante-logo.jpg');
+	background-size: cover;
+}
+
+div.mt-3.text-center i.fas.fa-star, div.mt-3.text-center i.fas.fa-star-half {
+	color: yellow;
+	text-shadow: #888 1px 1px 1px;
+}
+
+mat-card-actions.text-center button.btn.btn-outline-light i.fas.fa-heart {
+	color: red;
+	text-shadow: #888 1px 1px 1px;
+}

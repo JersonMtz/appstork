@@ -1,0 +1,36 @@
+div.input-group-append button.input-group-text {
+    background-color: #076F9F;
+    color: white;
+}
+
+.parallax{
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:15rem;
+	max-width: 100%;
+    position: relative;
+    background-image: url('../../../assets/img/catalogo.png');
+}
+
+.parallax::before {
+    content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.parallax-text {
+	color:#fff;
+	font-size: 2rem;
+	font-weight: bold;
+	left: 10%;
+	position: absolute;
+	text-align: center;
+	top:40%;
+	width: 80%;
+}
